@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+ //Variable initialization and declaration
+ int r,a,b;
+ int num1 = 0, num2 = 0, num3 = 0, num4 = 0, num5 = 0, num6 = 0, num7 = 0, num8 = 0, num9 = 0, num10 = 0;
+ srand((unsigned)time(NULL));
+
+ for(a=0;a<10;a++)
+ {
+   printf("\n");
+   for(b=0;b<10;b++)
+   {
+     //Seed a random number
+     r=rand()%11;
+     printf("%d",r);
+
+     //Formatting for displaying numbers
+     if (r < 10) {
+       printf("   ");
+     }
+     else{
+       printf("  ");
+     }
+
+     //Counts number of occurrences for each number
+     if (r==1) {num1 = num1 + 1;}
+     if (r==2) {num2 = num2 + 1;}
+     if (r==3) {num3 = num3 + 1;}
+     if (r==4) {num4 = num4 + 1;}
+     if (r==5) {num5 = num5 + 1;}
+     if (r==6) {num6 = num6 + 1;}
+     if (r==7) {num7 = num7 + 1;}
+     if (r==8) {num8 = num8 + 1;}
+     if (r==9) {num9 = num9 + 1;}
+     if (r==10) {num10 = num10 + 1;}
+     }
+   }
+
+//Outputs the number of occurrences
+printf("\n\n");
+printf("\tNumber of Occurences:\n");
+printf("-------------------------------------\n" );
+printf("1:  %d\n", num1);
+printf("2:  %d\n", num2);
+printf("3:  %d\n", num3);
+printf("4:  %d\n", num4);
+printf("5:  %d\n", num5);
+printf("6:  %d\n", num6);
+printf("7:  %d\n", num7);
+printf("8:  %d\n", num8);
+printf("9:  %d\n", num9);
+printf("10: %d\n", num10);
+
+printf("\n");
+ return(0);
+}
